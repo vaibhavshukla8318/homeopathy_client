@@ -1,0 +1,167 @@
+.homePage {
+ /* max-height: calc(100vh- 15vh); */
+max-height: 100vh;
+ width: 100vw;
+ padding-top: 15vh;
+ background-color: #E9F9E7;
+position: fixed;
+overflow-y: scroll;
+overflow-x: hidden;
+}
+.electrohomeopathy{
+  /* color: rgb(34, 66, 56)!important; */
+  color: red!important;
+}
+.slider{
+  width: 98.5vw;
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+.slider::-webkit-scrollbar{
+ display: none;
+}
+.sliderImage{
+  display: flex;
+  flex-direction: row;
+  min-width: 100vw; 
+  max-height: 50vh;
+  background-position:center;
+  /* background-repeat: no-repeat;  */
+  background-size: contain;
+  flex-wrap: nowrap;
+  transition: transform 1s linear;
+  margin-top: 3px;
+  aspect-ratio:1/1 ;
+  /* object-fit: cover; */
+}
+
+
+.section1{
+  min-height: 50vh;
+  position: relative;
+}
+.section1 div{
+  min-height: 50%;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  text-align: justify;
+}
+.section1 h3{
+  color: green;
+}
+.section1 p{
+  line-height: 1.7rem;
+  color: darkgreen;
+}
+
+.section2{
+  min-height: 60vh;
+  background-color:  rgb(61, 189, 96);
+}
+.section2 h2{
+  margin-bottom: 15px;
+  color: #E9C909;
+  font-style: italic;
+}
+
+.contactInfo{
+  padding-bottom: 0px;
+  display: flex;
+  justify-content: space-between;
+}
+.contactInfo p{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  text-align: left!important;
+}
+.contactInfo p img{
+  height: 30px;
+  width: 30px;
+}
+a img{
+  height: 35px;
+  width: 35px;
+}
+.contactInfo div p a{
+  color: #fff;
+  transition: all 0.5s ease-in-out;
+}
+.contactInfo div p a:hover{
+  color: rgb(128, 155, 17);
+}
+.copyRight{
+  width: 100%;
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+@keyframes rotate360 {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(-360deg); }
+}
+
+.sanjeevaniCircle {
+  width: fit-content; /* Adjust size as needed */
+  height: fit-content; /* Adjust size as needed */
+  border-radius: 50%; /* Makes it a circle */
+  /* border: 2px solid black;  */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #fff;
+  /* animation: rotate360 5s linear infinite;  */
+}
+.sanjeevaniCircle img{
+    animation: rotate360 5s linear infinite; 
+}
+.sanjeevaniCircle img:hover{
+  animation: unset;
+}
+
+
+@media(max-width:500px){
+  .section1 div{
+    width: 100%;
+  }
+  .sanjeevaniCircle{
+    display: none;
+  }
+
+}
+@media(max-width:780px){
+  
+  .sliderImage{
+    max-height: 40vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .contactInfo{
+    display: flex;
+    flex-direction: column;
+  }
+  .contactInfo div{
+    margin-bottom: 30px;
+    border-bottom: 2px solid gray;
+    padding-bottom: 20px;
+  }
+  a{
+    
+    line-height: 1.5rem;
+    white-space: wrap;
+    color: #fff;
+    transition: all 0.3s ease-in-out;
+  }
+  .anchor{
+    padding-top: 17px;
+  }
+  
+}
+

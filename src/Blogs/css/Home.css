@@ -1,0 +1,40 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.blog-container {
+  padding: 3rem;
+  padding: 16vh;
+  text-align: center;
+  background-color: var(--background);
+  color: var(--background-text)!important;
+  height: 100vh;
+}
+
+.home-container h1 {
+  font-size: 2.5rem;
+  color: var(--background-text);
+}
+
+.home-container p {
+  font-size: 1.2rem;
+  color: var(--background-text);
+}
+
+
+.logout-button {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.logout-button:hover {
+  background-color: #d32f2f;
+}

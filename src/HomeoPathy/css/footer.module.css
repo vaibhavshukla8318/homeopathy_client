@@ -1,0 +1,112 @@
+
+.doctorCardContainer{
+  position: absolute;
+  min-width: 100%;
+  min-height: 15vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* transform: translatey(100vh); */
+  overflow: hidden;
+  /* background-color:#2E8B57; */
+  background-color: #657647;
+  padding: 20px;
+
+  }
+  
+  /* Card styling for doctor's profile */
+  .doctorCard {
+    position: absolute;
+    display: flex;
+    /* background-color: #e6f7ec;  */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: moveX 9s linear infinite;
+    white-space: nowrap;
+    color: #fff!important;
+  }
+  .doctorCardContainer:hover>.doctorCard{
+    animation: unset;
+  }
+  @keyframes moveX {
+    0% {
+      left: -70%;
+    }
+    100% {
+      left: calc(100% - 50px); 
+    }
+  }
+  
+  /* Image styling */
+  .doctorImage {
+    width: 60px;
+    height: 60px;
+    background-color: #F0F0F0;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 20px;
+    object-fit:fill;
+  }
+  .doctorImage img{
+    height: 60px;
+    width: 60px;
+  }
+  /* Doctor details */
+  .doctorDetails {
+    /* flex-grow: 1; */
+  }
+  
+  /* Headings */
+  .doctorDetails h2 {
+    margin-top: 0;
+    /* color: #2E8B57;  */
+    font-size: 24px;
+    margin-bottom: 13px;
+  }
+  
+  /* Text */
+  .doctorDetails p {
+    /* color: #666666;  */
+  }
+  
+  /* List items */
+  .doctorDetails ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .doctorDetails ul li {
+    /* margin-bottom: 2px; */
+    /* color: #666666;  */
+  }
+  
+  /* Links */
+  
+  
+  a:hover {
+    text-decoration: underline;
+  }
+
+  @media(max-width:780px){
+    @keyframes moveX {
+      0% {
+        left: -130%;
+      }
+      100% {
+        left: calc(120% - 50px); 
+      }
+    }
+  }
+
+  @media(min-width:800px) and (max-width:1000px){
+    @keyframes moveX {
+      0% {
+        left: -90%;
+      }
+      100% {
+        left: calc(100% - 50px); 
+      }
+    }
+  }
+  
