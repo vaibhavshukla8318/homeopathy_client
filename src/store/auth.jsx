@@ -132,7 +132,7 @@ export const AuthProvider = ({ children }) => {
   // Logout function
   const logout = () => {
     setToken(null);
-    setUser(null); // Clear user state
+    setUser(null); 
     localStorage.removeItem("token"); // Remove token from localStorage
     toast.success("Logged out successfully!");
   };
