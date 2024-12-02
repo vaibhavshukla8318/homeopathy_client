@@ -1,9 +1,9 @@
-import style from "./css/Loading.module.css"
+import "./css/Loading.css"
 
 const LoadingAdmin = () => {
   return (
-    <div className={style.loadingBlogPage}>
-       <div className={style.spin}>
+    <div className="loadingBlogPage">
+       <div className="spin">
        </div>
        <p>Welcome</p>
     </div>

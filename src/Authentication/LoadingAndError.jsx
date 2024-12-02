@@ -1,9 +1,9 @@
-import style from "./css/loadingPage.module.css"
+import "./css/loadingPage.css"
 
 const LoadingAuth = () => {
   return (
-    <div className={style.loadingBlogPage}>
-       <div className={style.spin}>
+    <div className="loadingBlogPage">
+       <div className="spin">
        </div>
        <p>Auth</p>
     </div>
