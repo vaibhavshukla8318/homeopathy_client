@@ -8,15 +8,17 @@ import Contact from '../../HomeoPathy/image/contact.png';
 import Logo from '../../HomeoPathy/image/logo.png'
 import BeforeSignUpImage from '../../HomeoPathy/image/beforeSignUp.png'
 import AfterSignUpImage from '../../HomeoPathy/image/afterSignUp.png'
-
 import { useAuth } from "../../store/auth";
+
+
 
 const Navbar = () => {
 
-  const { user, theme } = useAuth();
+  const { user } = useAuth();
+
 
   return (
-    <div className={style.blogNavbar} style={{backgroundColor: theme.primary}}>
+    <div className={style.blogNavbar}>
       <Link to="/blogs/" className={style.pageLinkDisplayBlock}>
         <p>
           <span>
@@ -56,17 +58,9 @@ const Navbar = () => {
             </>
             }
           </Link>
+         
         </div>
-        {/* <img src={Blog} alt='menuIcon' onClick={handleMenuClick} /> */}
       </div>
-      {/* <Link to="/" className={style.pageLinkDisplayNone}>
-        <p>
-          <span>
-            Aarogya Sanjeevani Blog
-            <img src={Logo} alt='logo'/>
-          </span>
-        </p>
-      </Link> */}
     </div>
   );
 };

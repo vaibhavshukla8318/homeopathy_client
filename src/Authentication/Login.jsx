@@ -34,7 +34,7 @@ const Login = () => {
         // localStorage.setItem("authToken", data.token);
         // localStorage.setItem("userId", data.userId);
         storeTokenInLS(data.token, data.userId)
-        navigate("/"); // Redirect to dashboard or home page
+        navigate("/"); 
       } else {
         toast.error(data.message || "Login failed. Please check your credentials.");
       }

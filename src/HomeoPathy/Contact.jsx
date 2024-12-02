@@ -1,4 +1,4 @@
-
+import {useState} from 'react'
 import style from './css/contact.module.css'
 import email from './image/email.png'
 import Whatsapp from './image/whatsapp.png';
@@ -7,36 +7,28 @@ import { useAuth } from '../store/auth';
 
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name:'',
+    email:''
+  })
 
   const { user } = useAuth();
-  console.log("this is coming from the contact page" , user)
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
 
   function Submit(e) {
-    e.preventDefault(); // Prevent default form submission behavior
-    const formEle = document.querySelector("form");
-    const formDatab = new FormData(formEle);
-    fetch(
-      // "https://script.google.com/macros/s/AKfycby5oxuFTDXRcunEV7Q3296z1GlMnyjq-R07uXRa6defXjPpwRhs03_VSsk5US8Lnkcd4g/exec",
-      {
-        method: "POST",
-        body: formDatab
-      }
-    )
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-        
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-      window.alert("Form submitted successfully!"); // Show alert box
-      formEle.querySelector('[name="Message"]').value = '';
-        formEle.querySelector('[name="Name"]').value = '';
-        formEle.querySelector('[name="Email"]').value = '';
-        formEle.querySelector('[name="Subject"]').value = '';
-        formEle.querySelector('[name="Number"]').value = '';
+    e.preventDefault();
+    alert("you can't send messages yet")
   }
+
+  alert("This Page is not completed so you can't send messages yet")
   
 
   return (
@@ -50,8 +42,8 @@ const Contact = () => {
               <textarea placeholder='Enter  Message' name="Message" required></textarea>
               <div>
                 <input type='text'
-                name="Name" value={user.username} placeholder='Your Name' required/>
-                <input type='email' name="Email" value={user.email} placeholder='Your Email' required/>
+                name="Name" value={user ? user.username : formData.name} onChange={handleChange} placeholder='Your Name' required/>
+                <input type='email' name="Email" value={user ? user.email : formData.email} onChange={handleChange} placeholder='Your Email' required/>
               </div>
               <input type='text' name="Subject" placeholder='Symptom'/>
               <div>

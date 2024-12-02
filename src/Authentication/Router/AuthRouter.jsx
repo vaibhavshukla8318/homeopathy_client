@@ -20,7 +20,7 @@ const AuthRouter = () => {
   }, []);
 
   if (loading) {
-    return <LoadingAuth />;
+    // return <LoadingAuth />;
   }
 
   return (

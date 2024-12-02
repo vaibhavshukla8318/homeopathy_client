@@ -126,6 +126,24 @@ body {
   cursor: pointer;
 }
 
+
+/* Theme Selector */
+.theme-selector {
+  position: absolute;
+  bottom: 15px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.theme-selector select {
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: none;
+}
+
+
 /* Mobile Styles */
 @media (max-width: 768px) {
   .menu {
@@ -152,22 +170,4 @@ body {
   .auth-buttons{
     flex-direction: column;
   }
-}
-
-
-
-/* Theme Selector */
-.theme-selector {
-  position: absolute;
-  bottom: 15px;
-  right: 20px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.theme-selector select {
-  padding: 5px 10px;
-  border-radius: 5px;
-  border: none;
 }

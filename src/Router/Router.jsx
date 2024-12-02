@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import HomeopathyRouter from '../HomeoPathy/Router/Router';
 import BlogRouter from '../Blogs/Router/Router';
 import AuthRouter from '../Authentication/Router/AuthRouter';
+import AdminRouter from '../Admin/Router/AdminRouter';
 
 const Router = () => {
   return (
@@ -17,6 +18,9 @@ const Router = () => {
 
         {/* Authentication Routes */}
         <Route path="/auth/*" element={<AuthRouter />} />
+
+        {/* Admin Routes */}
+        <Route path="/admin/*" element={<AdminRouter />} />
       </Routes>
     </BrowserRouter>
   );

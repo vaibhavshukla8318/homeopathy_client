@@ -3,7 +3,8 @@ import { useState, useEffect } from 'react';
 
 import BlogLayout from '../layout/Blog-layout';
 import Blog from '../Blogs';
-import { LoadingBlog } from '../LoadingAndError'; // Blog-specific loader
+import BlogContent from '../pages/Content';
+import { LoadingBlog } from '../LoadingAndError';
 
 const BlogRouter = () => {
   const [loading, setLoading] = useState(true);
@@ -17,13 +18,14 @@ const BlogRouter = () => {
   }, []);
 
   if (loading) {
-    return <LoadingBlog />;
+    // return <LoadingBlog />;
   }
 
   return (
     <Routes>
       <Route element={<BlogLayout />}>
         <Route path="/" element={<Blog />} />
+        <Route path="/:id" element={<BlogContent />} />
       </Route>
     </Routes>
   );

@@ -1,8 +1,7 @@
 .blogNavbar{
-  min-height: 15vh;
+  min-height: 11vh;
   width: 100vw;
   position: fixed;
-  /* background:#17a2b8; */
   background-color: var(--navbar);
   color: var(--navbar-text)!important;
   display: flex;
@@ -13,7 +12,6 @@
 }
 .blogNavbar p{
   max-width: 20vw;
-  /* width:100%; */
   overflow: auto;
   display: flex;
   justify-content: center;
@@ -30,7 +28,6 @@
   justify-content: center;
   align-items: center;
   font-size: 1.7rem;
-  /* color:rgb(207, 63, 147); */
   color: #fff;
   overflow: hidden;
   animation: move 8s forwards infinite;
@@ -77,7 +74,6 @@
   align-items: center;
   font-size: 1.2rem;
   text-decoration: none;
-  /* color: #a1c4ae; */
   color: #fff;
   transition: all 0.2s ease-in-out;
 }
@@ -146,7 +142,7 @@
 @media(max-width:780px){
   .blogNavbar{
     background-color: var(--navbar);
-    min-height: 10vh;
+    min-height: 7vh;
     padding: unset;
     padding-top: 15px;
   }

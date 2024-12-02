@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "../css/Navbar.css";
 import { useAuth } from "../../store/auth";
-import {useNavigate} from 'react-router-dom'
+import {useNavigate, Link} from 'react-router-dom'
 
 
 const Navbar = () => {
@@ -23,9 +23,9 @@ const Navbar = () => {
           <a href="/" className="nav-link">
             Home
           </a>
-          <a href="/blogs" className="nav-link">
+          <Link to="/blogs" className="nav-link">
             Blog
-          </a>
+          </Link>
           <div>
             {user ? (
               <div className="profile-dropdown">

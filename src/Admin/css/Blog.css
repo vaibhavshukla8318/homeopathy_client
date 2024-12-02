@@ -1,0 +1,205 @@
+/* Blog container styles */
+.form-blog-container {
+  position: absolute;
+  width: 100%;
+  margin-top: 0!important;
+}
+
+.formContainer .selectedDetails{
+  width: 75vw;
+  max-width: 100%;
+  height: fit-content;
+  background-color: var(--background);
+  color: var(--background-text);
+  margin: 0 auto;
+  margin-top: -10px;
+  margin-bottom: 20px;
+  padding:10px 15px;
+
+}
+
+.formContainer input{
+  margin-bottom: 10px;
+  background: none;
+  border: none;
+  border-bottom: 1.5px solid var(--navbar);
+  outline: none;
+  color: var(--background-text);
+  font-size: 1.2rem;
+}
+.formContainer input::placeholder{
+  color: var(--background-text);
+  font-size: 1.2rem;
+}
+
+.users{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.users .username{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 1.2rem;
+  width: 50%;
+  max-width: 100%;
+  white-space: nowrap;
+  text-overflow: clip;
+  overflow:hidden;
+}
+.users .username img,  .users .username #thumbnailImageLabel{
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 1px solid var(--background-text);
+}
+
+.users .username #thumbnailImage{
+  display: none;
+}
+.users .username #thumbnailImageLabel{
+  position: absolute;
+  background: transparent;
+  margin-top: 10px;
+}
+
+.formContainer .selectedContent{
+  position: relative;
+  width: 75vw;
+  /* height: fit-content; */
+  margin: 0 auto;
+  padding: 0;
+  border-radius: 10px;
+  margin-bottom: 250px;
+}
+
+.formContainer #content{
+  position: absolute;
+  border-radius: 10px;
+  height: 200px;
+  width: 100%;
+  background: var(--background);
+  color: var(--background-text);
+  padding: 15px;
+  font-size: 1.2rem;
+}
+.formContainer #content::placeholder{
+  font-size: 1.2rem;
+  color: var(--background-text);
+}
+
+/* Blog Post Content Styles */
+.formContainer .blog-post-content {
+  position: relative;
+  width: 75vw;
+  height: 65vh;
+  margin: 1rem auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* overflow: hidden; */
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  
+}
+
+.formContainer .blog-post-content .file {
+  position: absolute;
+  bottom: 10%;
+  width: 100%;
+  height: 87%;
+  color: var(--navbar-text);
+  display: none;
+}
+
+
+.formContainer .blog-post-content img{
+  width: 100%;
+  height: 57vh;
+  margin-bottom: 46px;
+  border-radius: 10px;
+  object-fit: contain;
+  cursor: pointer;
+  background: linear-gradient(90deg, #6a11cb, #2575fc);
+}
+
+.formContainer .imageLabel:hover~img {
+  background: linear-gradient(90deg, #2575fc, #6a11cb); 
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.formContainer .imageLabel {
+  position: absolute;
+  bottom: 10%;
+  width: 100%;
+  height: 87%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background:transparent;
+  color: #fff;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 10px;
+  transition: opacity 0.3s ease-in-out;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+}
+.formContainer .imageLabel span{
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 10px;
+}
+#imageURL{
+  position: absolute;
+  top: 87%;
+}
+
+.formContainer .submit-btn{
+  transform: translate(72vw, 0vh);
+  margin-bottom: 150px;
+}
+
+@media(max-width:768px){
+
+  .formContainer .selectedDetails, .formContainer .selectedContent{
+    width: 100%;
+  }
+
+  .formContainer .blog-post-content{
+    width: 100%;
+    height: 45vh;
+    margin: 0;
+    margin-top: 5px;
+    border-top-left-radius:0;
+    border-top-right-radius: 0;
+    overflow: hidden;
+  }
+
+  .formContainer .blog-post-content .file, .formContainer .imageLabel{
+    top: 0%;
+    height: 80%;
+  }
+
+  .formContainer .blog-post-content img{
+    width: 100%;
+    height: 37vh;
+    margin-bottom: 13%;
+    border-radius: 10px;
+    
+  }
+  
+
+  .formContainer .submit-btn{
+    transform: translate(35vw, 0vh);
+  }
+
+
+}

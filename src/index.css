@@ -7,6 +7,9 @@
   --background-text: #444;
 
 }
+body{
+  background-color: var(--background);
+}
 .navbar {
   background-color: var(--navbar);
   color: var(--navbar-text);

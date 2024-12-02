@@ -16,9 +16,6 @@ const Slider = ({ images }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
  
-
-
-
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
@@ -101,20 +98,6 @@ const Home = () => {
   return (
     <>
       <div className={style.homePage}>
-        {/* <div className={style.doctorCardContainer}>
-          <div className={style.doctorCard}>
-            <div className={style.doctorImage}>
-            </div>
-            <div className={style.doctorDetails}>
-                <h2>Dr. Sanjiv Shukla</h2>
-                <ul>
-                    <li>BEMS (Bachelor of Electro Homeopathic Medicine and Surgery)</li>
-                    <li>MDEH (Master of Electro Homeopathy)</li>
-                    <li>PGDNYS (Post Graduate Diploma in Naturopathy and Yoga Science)</li>
-                </ul>
-            </div>
-          </div>
-        </div> */}
         <Slider images={images} />
         <section className={style.section1}>
           <div>
