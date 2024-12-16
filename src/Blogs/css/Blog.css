@@ -379,7 +379,7 @@ nav ul li:hover .tooltip {
 
 .blogPost{
   width: 30%;
-  height: 62.5vh;
+  height: 55vh;
   background-color: var(--navbar);
   border-radius: 10px;
   margin-bottom: 10px;
@@ -486,6 +486,9 @@ nav ul li:hover .tooltip {
 @media(max-width:600px){
   .blog-container{
     margin-top: 7.5vh!important;
+  }
+  .blogPost{
+    height: 50vh!important;
   }
   .topContainer{
     margin-top: 15px;

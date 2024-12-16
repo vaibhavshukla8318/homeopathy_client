@@ -2,8 +2,11 @@ import { useState } from "react";
 import { toast } from "react-toastify";
 import "./css/Blog.css";
 import { useAuth } from "../store/auth";
+import RichTextEditor from "./RichTextEditor";
+
 
 const Admin = () => {
+  const [richTextContent, setRichTextContent] = useState("");
   const [blogs, setblogs] = useState({
     title: "",
     author: "",
@@ -19,17 +22,10 @@ const [thumbnailPreview, setThumbnailPreview] = useState("../../public/image/upl
 
   const handleInput = (e) => {
     const { name, value } = e.target;
-    if (name === "pdf") {
-      setblogs((prevblogs) => ({
-        ...prevblogs,
-        pdf: value.split(",").map((url) => url.trim()),
-      }));
-    } else {
-      setblogs((prevblogs) => ({
-        ...prevblogs,
-        [name]: value,
-      }));
-    }
+    setblogs((prevblogs) => ({
+      ...prevblogs,
+      [name]: value,
+    }));
   };
 
 const handleFileInput = (e) => {
@@ -84,6 +80,7 @@ const handleFileInput = (e) => {
         setblogs({ title: "", author: "", image: "", thumbnailImage: "", content: "" });
         setImagePreview(null); 
         setThumbnailPreview(""); 
+        setRichTextContent("");
       } else {
         toast.error(res_data.message || "Failed to add blog");
       }
@@ -151,15 +148,20 @@ const handleFileInput = (e) => {
             </div>
           </div>
         </div>
-        <div className="selectedContent">
-          <textarea
-            id="content"
-            name="content"
-            placeholder="Enter Your Content Here"
-            value={blogs.content}
-            onChange={handleInput}
+
+         <div className="selectedContent">
+          <RichTextEditor
+            content={richTextContent}
+            onChange={(value) => {
+              setRichTextContent(value); // Update rich text state
+              setblogs((prevblogs) => ({
+                ...prevblogs,
+                content: value, // Sync with blogs.content
+              }));
+            }}
           />
         </div>
+
         <button type="submit" className="submit-btn">Add Blog</button>
       </form>
     </div>

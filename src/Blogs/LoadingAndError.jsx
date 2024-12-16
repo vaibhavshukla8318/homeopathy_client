@@ -5,7 +5,7 @@ const LoadingBlog = () => {
     <div className={style.loadingBlogPage}>
        <div className={style.spin}>
        </div>
-       <p>Blog</p>
+       <p></p>
     </div>
   )
 };
