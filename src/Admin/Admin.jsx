@@ -37,19 +37,19 @@ const handleFileInput = (e) => {
   const file = e.target.files ? e.target.files[0] : null;
 
   if (file) {
-    const fileUrl = URL.createObjectURL(file); // Create preview URL for the image
+    const fileUrl = URL.createObjectURL(file);
     if (name === "image") {
       setblogs((prevblogs) => ({
         ...prevblogs,
         image: file,
       }));
-      setImagePreview(fileUrl); // Set image preview for main image
+      setImagePreview(fileUrl);
     } else if (name === "thumbnailImage") {
       setblogs((prevblogs) => ({
         ...prevblogs,
         thumbnailImage: file,
       }));
-      setThumbnailPreview(fileUrl); // Set image preview for thumbnail
+      setThumbnailPreview(fileUrl);
     }
   } else {
     setblogs((prevblogs) => ({
