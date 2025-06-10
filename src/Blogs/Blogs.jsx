@@ -71,7 +71,6 @@ const Blog = () => {
             </p>
           </div>
         </div>
-       {!loading ?(
          <div className="blog-post-container">
          {blog?.map((post, index) => (
            <Link to={`/blogs/${post._id}`} className="blogPost" key={index}
@@ -92,9 +91,7 @@ const Blog = () => {
            </Link>
          ))}
        </div>
-       ) :
-       <p>please wait...</p>
-       }
+       
       </div>      
     </div>
   );
