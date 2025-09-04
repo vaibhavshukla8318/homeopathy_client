@@ -6,10 +6,10 @@ import { FaRegBookmark } from "react-icons/fa6";
 import { IoSearch } from "react-icons/io5";
 import { useAuth } from '../store/auth';
 import { Link } from 'react-router-dom';
-import { Loading } from '../HomeoPathy/LoadingAndError';
+// import { Loading } from '../HomeoPathy/LoadingAndError';
 
 const Blog = () => {
-  const [loading, setLoading] = useState(true)
+  // const [loading, setLoading] = useState(true)
   const [menu, setMenu] = useState(false);
   const [visible, setVisible] = useState(false);
   const searchContainerRef = useRef(null);
@@ -25,7 +25,7 @@ const Blog = () => {
   };
 
   useEffect(() => {
-    setLoading(false);
+    // setLoading(false);
     document.addEventListener('mousedown', handleClickOutside);
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
@@ -71,25 +71,28 @@ const Blog = () => {
             </p>
           </div>
         </div>
-         <div className="blog-post-container">
-         {blog?.map((post, index) => (
-           <Link to={`/blogs/${post._id}`} className="blogPost" key={index}
-           >
-              <img
-               src={
-                 post.image
-                   ? post.image.startsWith('http://') || post.image.startsWith('https://')
-                     ? post.image
-                     : `${API}${post.image}`
-                   : 'fallback.jpg'
-               }
-               alt="book cover"
-             />
-             <div className="blogPostDetails">
-               <h2>{post.title}</h2>
-             </div>
-           </Link>
-         ))}
+        <div className="blog-post-container">
+
+          {blog?.map((post, index) => (
+           <div className = "blogPosts" key={index}> 
+            <Link to={`/blogs/${post._id}`} className="blogPost">
+                <img
+                src={
+                  post.image
+                    ? post.image.startsWith('http://') || post.image.startsWith('https://')
+                      ? post.image
+                      : `${API}${post.image}`
+                    : 'fallback.jpg'
+                }
+                alt="book cover"
+              />
+              <div className="blogPostDetails">
+                <h2>{post.title}</h2>
+              </div>
+            </Link>
+           </div>
+           ))}
+         
        </div>
        
       </div>      
