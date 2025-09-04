@@ -74,12 +74,11 @@ const Blog = () => {
         <div className="blog-post-container">
 
           {blog?.map((post, index) => (
-           <div className = "blogPosts" key={index}> 
-            <Link to={`/blogs/${post._id}`} className="blogPost">
+            <Link to={`/blogs/${post._id}`} className="blogPost" key={index}>
                 <img
                 src={
                   post.image
-                    ? post.image.startsWith('http://') || post.image.startsWith('https://')
+                    ? post.image.startsWith('https://') || post.image.startsWith('https://')
                       ? post.image
                       : `${API}${post.image}`
                     : 'fallback.jpg'
@@ -90,7 +89,7 @@ const Blog = () => {
                 <h2>{post.title}</h2>
               </div>
             </Link>
-           </div>
+          
            ))}
          
        </div>

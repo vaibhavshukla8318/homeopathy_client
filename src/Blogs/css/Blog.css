@@ -376,20 +376,7 @@ nav ul li:hover .tooltip {
    gap: 30px;
    margin: 0 auto;
 }
-.blogPosts{
-  width: 30vw;
-  height: 55vh;
-  /* background-color: var(--navbar); */
-  
-   background-color: gray;
-  border-radius: 10px;
-  margin-bottom: 10px;
-  overflow: hidden;
-  color: var(--navbar-text);
-  text-decoration: none;
-  box-shadow: 0 0 10px rgba(0, 0, 0.2);
-  transition: all 0.3s ease-in-out;
-}
+
 .blogPost{
   width: 30%;
   height: 55vh;
