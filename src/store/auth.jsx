@@ -190,7 +190,7 @@ export const AuthProvider = ({ children }) => {
   useEffect(() => {
       fetchUserData();
       fetchBlogData();
-  }, [blog]);
+  }, []);
 
   useEffect(() => {
     const savedTheme = localStorage.getItem("selectedTheme");
